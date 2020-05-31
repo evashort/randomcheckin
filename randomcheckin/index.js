@@ -1,4 +1,4 @@
-// AWS Lambda function checkinCallback
+// AWS Lambda function randomcheckin
 // This function is triggered on a schedule
 
 const AWS = require('aws-sdk')
