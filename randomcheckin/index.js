@@ -62,19 +62,6 @@ function postCheckinPairs(guild) {
 exports.handler = async function (event) {
     const client = new Discord.Client()
 
-    var secretsManager = new AWS.SecretsManager({region: 'us-west-1'})
-    secretsManager.getSecretValue(
-        {SecretId: 'randomcheckin'},
-        function(err, data) {
-            if (err) {
-                throw err
-            }
-
-            secret = JSON.parse(data.SecretString)
-            client.login(secret.bot_token)
-        }
-    )
-
     return new Promise(function (resolve, reject) {
         client.once(
             'ready',
@@ -98,6 +85,19 @@ exports.handler = async function (event) {
                         body: JSON.stringify('Hello from Lambda!')
                     }
                 )
+            }
+        )
+
+        var secretsManager = new AWS.SecretsManager({region: 'us-west-1'})
+        secretsManager.getSecretValue(
+            {SecretId: 'randomcheckin'},
+            function(err, data) {
+                if (err) {
+                    throw err
+                }
+
+                secret = JSON.parse(data.SecretString)
+                client.login(secret.bot_token)
             }
         )
     })
