@@ -4,6 +4,7 @@ users can then schedule a video chat to check in with each other sometime
 during the week.
 
 The message containing the user pairing looks like this:
+
 ![Example pairing message](message_screenshot.png)
 
 [Invite this bot to a server you manage](https://discord.com/api/oauth2/authorize?client_id=714659706961920061&permissions=2048&scope=bot)
