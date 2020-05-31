@@ -3,6 +3,9 @@ the `weekly-checkin` role and posts it to the `#checkin` channel. Each pair of
 users can then schedule a video chat to check in with each other sometime
 during the week.
 
+The message containing the user pairing looks like this:
+![Example pairing message](message_screenshot.png)
+
 [Invite this bot to a server you manage](https://discord.com/api/oauth2/authorize?client_id=714659706961920061&permissions=2048&scope=bot)
 
 The invite URL uses Discord's [bot authorization flow](https://discord.com/developers/docs/topics/oauth2#bot-authorization-flow) with the following query params:
