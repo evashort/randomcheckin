@@ -1,0 +1,8 @@
+{
+    "name": "randomcheckin",
+    "version": "0.0.0",
+    "dependencies": {
+        "discord.js": "^12.2.0",
+        "aws-sdk": "^2.686.0"
+    }
+}
